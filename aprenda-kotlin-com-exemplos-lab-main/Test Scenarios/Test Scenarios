@@ -1,0 +1,14 @@
+fun main() {
+    val usuario1 = Usuario("Alice", "alice@example.com")
+    val usuario2 = Usuario("Bob", "bob@example.com")
+    
+    val conteudo1 = ConteudoEducacional("Introdução à Programação", 120)
+    val conteudo2 = ConteudoEducacional("Algoritmos Avançados", 180)
+    
+    val formacao = Formacao("Ciência da Computação", listOf(conteudo1, conteudo2))
+    
+    formacao.matricular(usuario1)
+    formacao.matricular(usuario2)
+    
+    println("Inscritos na formação ${formacao.nome}: ${formacao.inscritos.joinToString(", ") { it.name }}")
+}
